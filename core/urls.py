@@ -61,4 +61,4 @@ urlpatterns = [
    path('fetchuser/', accountview.fetchUser.as_view() ),
 ]
 
-urlpatterns += staticfiles_urlpatterns()
+urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
